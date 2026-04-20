@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muliyar Grama Panchayat | Kerala</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Malayalam&family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green-deep: #0d4a2f;
+      --green-mid: #1a7a4a;
+      --green-light: #2dbe6c;
+      --gold: #e4a90e;
+      --gold-light: #f5c842;
+      --cream: #faf6ef;
+      --text-dark: #1a1a1a;
+      --text-mid: #3d3d3d;
+      --text-muted: #6b6b6b;
+      --white: #ffffff;
+      --shadow: 0 8px 40px rgba(13,74,47,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,74,47,0.97);
+      backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 40px; height: 40px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .nav-logo-text {
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .nav-logo-text span { color: var(--gold-light); font-size: 0.75rem; font-weight: 400; display: block; }
+    .nav-links {
+      display: flex; gap: 6px; list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.25s;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.15); color: var(--white); }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-burger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #0d4a2f 0%, #1a7a4a 55%, #0b3d26 100%);
+      display: flex; align-items: center;
+      padding: 80px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0L80 12v2L54 40h-2zm4 0L80 16v2L58 40h-2zm4 0L80 20v2L62 40h-2zm4 0L80 24v2L66 40h-2zm4 0L80 28v2L70 40h-2zm4 0L80 32v2L74 40h-2zm4 0L80 36v2L78 40h-2zm4 0L80 40v-2h-2zm-4-40h2L40 4V2zm-4 0h2L40 8V6zm-4 0h2L40 12v-2zm-4 0h2L40 16v-2zm-4 0h2L40 20v-2zm-4 0h2L40 24v-2zm-4 0h2L40 28v-2zm-4 0h2L40 32v-2zm-4 0h2L40 36v-2zm-4 0h2L40 40v-2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(228,169,14,0.2);
+      border: 1px solid rgba(228,169,14,0.4);
+      border-radius: 30px;
+      padding: 6px 16px;
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .hero h1 em { color: var(--gold-light); font-style: normal; }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      padding: 18px 24px;
+      min-width: 130px;
+      backdrop-filter: blur(8px);
+    }
+    .stat-card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .stat-card .label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .hero-cta {
+      display: flex; flex-wrap: wrap; gap: 14px;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--green-deep);
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 20px rgba(228,169,14,0.35);
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(228,169,14,0.45); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .hero-visual {
+      position: absolute; right: 4%; top: 50%; transform: translateY(-50%);
+      width: min(400px, 38vw);
+      opacity: 0.15;
+      z-index: 1;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 5%; }
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+    }
+    .section-tag {
+      display: inline-block;
+      background: rgba(45,190,108,0.12);
+      color: var(--green-mid);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(45,190,108,0.25);
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--green-deep);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-header p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .about-img-box {
+      position: relative;
+    }
+    .about-img-main {
+      width: 100%;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0d4a2f 0%, #2dbe6c 100%);
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      box-shadow: var(--shadow);
+    }
+    .about-img-badge {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--gold);
+      border-radius: 16px;
+      padding: 18px 22px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(228,169,14,0.3);
+    }
+    .about-img-badge .big { font-size: 1.8rem; font-weight: 800; color: var(--green-deep); font-family: 'Playfair Display', serif; }
+    .about-img-badge small { font-size: 0.75rem; color: var(--green-deep); font-weight: 600; }
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+    }
+    .about-content p {
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .feature-chip {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px;
+      background: rgba(13,74,47,0.06);
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--green-deep);
+    }
+    .feature-chip .icon { font-size: 1.1rem; }
+
+    /* ── FACILITIES (PHP CENTRES) ── */
+    #facilities { background: var(--cream); }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-mid), var(--green-light));
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(13,74,47,0.14); }
+    .card-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(13,74,47,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .card-meta {
+      display: flex; align-items: center; gap: 6px;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--green-mid);
+      font-weight: 500;
+    }
+
+    /* ── EDUCATION ── */
+    #education { background: var(--green-deep); }
+    #education .section-tag { background: rgba(228,169,14,0.2); color: var(--gold-light); border-color: rgba(228,169,14,0.3); }
+    #education .section-header h2 { color: var(--white); }
+    #education .section-header p { color: rgba(255,255,255,0.65); }
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .edu-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 26px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .edu-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+    .edu-type {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+    .type-primary { background: rgba(45,190,108,0.2); color: #7ffcbb; }
+    .type-secondary { background: rgba(228,169,14,0.2); color: var(--gold-light); }
+    .type-higher { background: rgba(80,120,255,0.2); color: #a0b8ff; }
+    .type-lp { background: rgba(255,100,100,0.2); color: #ffb3b3; }
+    .edu-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .edu-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .edu-info {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 14px;
+    }
+    .edu-tag {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.08);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .service-card {
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: 18px;
+      border: 1.5px solid rgba(13,74,47,0.1);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .service-card:hover {
+      border-color: var(--green-mid);
+      background: rgba(13,74,47,0.04);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(13,74,47,0.1);
+    }
+    .service-icon { font-size: 2.5rem; margin-bottom: 14px; display: block; }
+    .service-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; }
+    .service-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── WARD MAP ── */
+    #wards { background: var(--cream); }
+    .wards-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .ward-list { display: flex; flex-direction: column; gap: 10px; }
+    .ward-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.06);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .ward-item:hover, .ward-item.active {
+      border-color: var(--green-mid);
+      background: rgba(13,74,47,0.05);
+    }
+    .ward-num {
+      width: 36px; height: 36px;
+      background: var(--green-deep);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .ward-item.active .ward-num { background: var(--gold); color: var(--green-deep); }
+    .ward-name { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+    .ward-rep { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+    .ward-map-visual {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      min-height: 480px;
+      display: flex; align-items: center; justify-content: center;
+      position: sticky; top: 80px;
+    }
+    .map-placeholder {
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .map-placeholder .icon { font-size: 4rem; margin-bottom: 16px; display: block; }
+    .map-placeholder h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green-deep); margin-bottom: 8px; }
+    .map-placeholder p { font-size: 0.875rem; }
+    .ward-detail {
+      background: rgba(13,74,47,0.06);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .ward-detail h4 { font-size: 1rem; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; }
+    .ward-detail p { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ── OFFICIALS ── */
+    #officials { background: var(--white); }
+    .officials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .official-card {
+      text-align: center;
+      padding: 32px 20px 24px;
+      border-radius: 18px;
+      background: linear-gradient(160deg, rgba(13,74,47,0.04) 0%, rgba(45,190,108,0.05) 100%);
+      border: 1px solid rgba(13,74,47,0.08);
+      transition: all 0.3s;
+    }
+    .official-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .official-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      border: 3px solid var(--gold);
+    }
+    .official-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--green-deep); margin-bottom: 4px; }
+    .official-card .role { font-size: 0.8rem; color: var(--green-mid); font-weight: 600; margin-bottom: 8px; }
+    .official-card .contact { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ── CONTACT ── */
+    #contact { background: linear-gradient(160deg, #0d4a2f 0%, #1a7a4a 100%); }
+    #contact .section-tag { background: rgba(228,169,14,0.2); color: var(--gold-light); border-color: rgba(228,169,14,0.3); }
+    #contact .section-header h2 { color: var(--white); }
+    #contact .section-header p { color: rgba(255,255,255,0.65); }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-info-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-info-item .ci-icon {
+      font-size: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      width: 46px; height: 46px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    .contact-info-item h4 { font-size: 0.85rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+    .contact-info-item p { font-size: 0.875rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .contact-form { background: rgba(255,255,255,0.08); border-radius: 20px; padding: 32px; border: 1px solid rgba(255,255,255,0.1); }
+    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: white; margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      color: white;
+      font-size: 0.875rem;
+      font-family: 'DM Sans', sans-serif;
+      transition: border 0.25s;
+      outline: none;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold-light); }
+    .form-group select option { background: var(--green-deep); color: white; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--gold);
+      color: var(--green-deep);
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.3s;
+    }
+    .btn-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background: rgba(45,190,108,0.2);
+      border-radius: 12px;
+      color: #7ffcbb;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #061e13;
+      padding: 40px 5% 28px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand .fn { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: white; font-weight: 700; }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 8px; max-width: 260px; line-height: 1.6; }
+    .footer-links h5 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 12px; }
+    .footer-links a { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { text-align: center; margin-top: 24px; font-size: 0.8rem; color: rgba(255,255,255,0.3); max-width: 1100px; margin-left: auto; margin-right: auto; }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--gold);
+      padding: 10px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 60px;
+      animation: tickerScroll 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-track span { font-size: 0.82rem; font-weight: 600; color: var(--green-deep); padding: 0 10px; }
+    .ticker-track span::before { content: '●'; margin-right: 10px; color: var(--green-mid); }
+    @keyframes tickerScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--green-deep); padding: 20px; gap: 4px; }
+      .nav-burger { display: flex; }
+      .hero { min-height: auto; padding: 100px 5% 60px; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-main { height: 260px; }
+      .about-img-badge { right: 10px; bottom: -14px; }
+      .wards-layout { grid-template-columns: 1fr; }
+      .ward-map-visual { position: static; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .hero-stats { gap: 12px; }
+      .stat-card { min-width: 100px; padding: 14px 16px; }
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── SCROLL TOP ── */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 46px; height: 46px;
+      background: var(--green-deep);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      transition: all 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 99;
+      text-decoration: none;
+    }
+    .scroll-top.show { opacity: 1; pointer-events: auto; }
+    .scroll-top:hover { background: var(--green-mid); transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">🌿</div>
+    <div class="nav-logo-text">
+      Muliyar Panchayat
+      <span>Wayanad District, Kerala</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#facilities">Health</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#wards">Wards</a></li>
+    <li><a href="#officials">Officials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-burger" id="burger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker" style="margin-top:64px">
+  <div class="ticker-track" id="ticker">
+    <span>Ward Sabhas scheduled for May 2025</span>
+    <span>MGNREGS job cards renewal open</span>
+    <span>Kudumbashree meeting: 3rd Saturday monthly</span>
+    <span>Primary Health Centre — Open 8AM–5PM daily</span>
+    <span>Ration card corrections: Visit office with Aadhaar</span>
+    <span>Water supply project Phase-2 commencing soon</span>
+    <span>Ward Sabhas scheduled for May 2025</span>
+    <span>MGNREGS job cards renewal open</span>
+    <span>Kudumbashree meeting: 3rd Saturday monthly</span>
+    <span>Primary Health Centre — Open 8AM–5PM daily</span>
+    <span>Ration card corrections: Visit office with Aadhaar</span>
+    <span>Water supply project Phase-2 commencing soon</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content fade-in">
+    <div class="hero-badge">🌿 Established Grama Panchayat</div>
+    <h1>Muliyar<br/><em>Grama Panchayat</em></h1>
+    <p class="hero-subtitle">Serving the communities of Muliyar with transparent governance, accessible healthcare, quality education, and sustainable rural development in the heart of Wayanad, Kerala.</p>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="num">13</div>
+        <div class="label">Wards</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">~22K</div>
+        <div class="label">Population</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">3</div>
+        <div class="label">PHCs / Sub-Centres</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">12+</div>
+        <div class="label">Schools</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#services" class="btn-primary">🏛️ Our Services</a>
+      <a href="#contact" class="btn-outline">📞 Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="180" stroke="white" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="140" stroke="white" stroke-width="1"/>
+      <circle cx="200" cy="200" r="100" stroke="white" stroke-width="0.75"/>
+      <circle cx="200" cy="200" r="60" stroke="white" stroke-width="0.5"/>
+      <line x1="20" y1="200" x2="380" y2="200" stroke="white" stroke-width="0.5"/>
+      <line x1="200" y1="20" x2="200" y2="380" stroke="white" stroke-width="0.5"/>
+      <line x1="73" y1="73" x2="327" y2="327" stroke="white" stroke-width="0.5"/>
+      <line x1="327" y1="73" x2="73" y2="327" stroke="white" stroke-width="0.5"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid fade-in">
+    <div class="about-img-box">
+      <div class="about-img-main">🌿</div>
+      <div class="about-img-badge">
+        <div class="big">2006</div>
+        <small>Est. Year</small>
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>About Muliyar Panchayat</h2>
+      <p>Muliyar Grama Panchayat is a local self-governance unit located in Mananthavady Taluk, Wayanad District, Kerala. It is nestled in the Western Ghats region, known for its rich biodiversity, tribal communities, and lush green landscape.</p>
+      <p>The panchayat is committed to delivering quality services to its residents through transparent administration, proactive development planning, and community participation through Ward Sabhas and Grama Sabhas.</p>
+      <p>Key development areas include rural infrastructure, water supply, sanitation, women empowerment via Kudumbashree, and improving living standards for Scheduled Tribe communities.</p>
+      <div class="about-features">
+        <div class="feature-chip"><span class="icon">🏔️</span> Western Ghats Region</div>
+        <div class="feature-chip"><span class="icon">🌲</span> Tribal Communities</div>
+        <div class="feature-chip"><span class="icon">💧</span> Water & Sanitation</div>
+        <div class="feature-chip"><span class="icon">👩‍👩‍👧</span> Kudumbashree Units</div>
+        <div class="feature-chip"><span class="icon">🛣️</span> Rural Roads</div>
+        <div class="feature-chip"><span class="icon">🌱</span> Eco Development</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH / PHP CENTRES -->
+<section id="facilities">
+  <div class="section-header fade-in">
+    <div class="section-tag">Healthcare</div>
+    <h2>Primary Health Centres & Sub-Centres</h2>
+    <p>Government-run health facilities providing primary and preventive healthcare to all residents of Muliyar Panchayat.</p>
+  </div>
+  <div class="cards-grid fade-in">
+
+    <div class="card">
+      <div class="card-icon">🏥</div>
+      <h3>Muliyar Primary Health Centre</h3>
+      <p>The main PHC serving the panchayat with OPD services, maternal & child health, immunisation, and emergency care. Staffed by Medical Officer, nurses, and paramedics.</p>
+      <div class="card-meta">📍 Muliyar Junction &nbsp;|&nbsp; ⏰ 8AM – 5PM</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🩺</div>
+      <h3>Sub-Centre – Panamaram Road</h3>
+      <p>Health sub-centre providing ante-natal care, immunisation sessions, and basic outpatient services for the northern wards of the panchayat.</p>
+      <div class="card-meta">📍 Panamaram Road &nbsp;|&nbsp; ⏰ 9AM – 4PM</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🧪</div>
+      <h3>Sub-Centre – Tribal Colony Area</h3>
+      <p>Dedicated sub-centre for tribal communities providing mobile medical camps, ASHA worker coordination, and regular health monitoring programmes.</p>
+      <div class="card-meta">📍 Colony Area &nbsp;|&nbsp; ⏰ 9AM – 3PM</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💊</div>
+      <h3>Jan Aushadhi Kendram</h3>
+      <p>Pradhan Mantri Bhartiya Janaushadhi Pariyojana outlet offering generic medicines at subsidised prices to BPL and general public.</p>
+      <div class="card-meta">📍 Panchayat Building &nbsp;|&nbsp; ⏰ 9AM – 5PM</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🌡️</div>
+      <h3>Aarogyakeralam Programme</h3>
+      <p>Comprehensive health screening and follow-up programme covering NCD (diabetes, hypertension, cancer) detection for all adults above 30 years.</p>
+      <div class="card-meta">📍 PHC & Sub-Centres &nbsp;|&nbsp; Regular Camps</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🚑</div>
+      <h3>108 Ambulance & Emergency</h3>
+      <p>DISHA helpline and 108 ambulance service coordinated through the PHC for emergency response within the panchayat limits.</p>
+      <div class="card-meta">📞 Dial 108 / DISHA 1056 &nbsp;|&nbsp; 24×7</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header fade-in">
+    <div class="section-tag">Education</div>
+    <h2>Educational Institutions</h2>
+    <p>Schools and institutions within Muliyar Panchayat providing quality education from lower primary to higher secondary levels.</p>
+  </div>
+  <div class="edu-grid fade-in">
+
+    <div class="edu-card">
+      <span class="edu-type type-lp">Lower Primary</span>
+      <h3>GLPS Muliyar</h3>
+      <p>Government Lower Primary School serving Std I–IV, with Malayalam and English medium sections.</p>
+      <div class="edu-info">
+        <span class="edu-tag">Govt</span>
+        <span class="edu-tag">Malayalam Medium</span>
+        <span class="edu-tag">Std I–IV</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-lp">Lower Primary</span>
+      <h3>GLPS Tribal Colony</h3>
+      <p>Residential lower primary school for tribal children with special hostels and mid-day meal programme.</p>
+      <div class="edu-info">
+        <span class="edu-tag">Govt Tribal</span>
+        <span class="edu-tag">Residential</span>
+        <span class="edu-tag">Std I–IV</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-primary">Upper Primary</span>
+      <h3>GUPS Muliyar</h3>
+      <p>Government Upper Primary School offering Std V–VII with science lab, library, and sports facilities.</p>
+      <div class="edu-info">
+        <span class="edu-tag">Govt</span>
+        <span class="edu-tag">Malayalam Medium</span>
+        <span class="edu-tag">Std V–VII</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-secondary">High School</span>
+      <h3>GHS Muliyar</h3>
+      <p>Government High School providing Std VIII–X with Science, Commerce streams and vocational training.</p>
+      <div class="edu-info">
+        <span class="edu-tag">Govt</span>
+        <span class="edu-tag">Malayalam & English</span>
+        <span class="edu-tag">Std VIII–X</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-higher">Higher Secondary</span>
+      <h3>GHSS Muliyar</h3>
+      <p>Government Higher Secondary School with Science, Humanities and Commerce streams for Plus One and Plus Two.</p>
+      <div class="edu-info">
+        <span class="edu-tag">Govt</span>
+        <span class="edu-tag">Plus One & Two</span>
+        <span class="edu-tag">3 Streams</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-lp">Anganwadi</span>
+      <h3>ICDS Anganwadi Centres (×6)</h3>
+      <p>Six Integrated Child Development Scheme centres across wards for early childhood education and nutrition for 0–6 year age group.</p>
+      <div class="edu-info">
+        <span class="edu-tag">ICDS</span>
+        <span class="edu-tag">0–6 Years</span>
+        <span class="edu-tag">Nutrition</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-primary">Vocational</span>
+      <h3>Skill Development Centre</h3>
+      <p>KASE-run skill training centre offering courses in tailoring, computer literacy, and allied health for youth and women.</p>
+      <div class="edu-info">
+        <span class="edu-tag">KASE</span>
+        <span class="edu-tag">Youth & Women</span>
+        <span class="edu-tag">Vocational</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-type type-secondary">Adult Education</span>
+      <h3>Saksharatha Kendra</h3>
+      <p>Adult literacy and continuing education centre under Kerala State Literacy Mission for adults above 18 years who missed formal schooling.</p>
+      <div class="edu-info">
+        <span class="edu-tag">KSLMA</span>
+        <span class="edu-tag">Adults 18+</span>
+        <span class="edu-tag">Evening Batches</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header fade-in">
+    <div class="section-tag">Public Services</div>
+    <h2>Panchayat Services</h2>
+    <p>Administrative and welfare services provided to all residents through the Muliyar Grama Panchayat office.</p>
+  </div>
+  <div class="services-grid fade-in">
+    <div class="service-card">
+      <span class="service-icon">📋</span>
+      <h3>Birth & Death Certificate</h3>
+      <p>Registration and issuance of certificates within 7 working days</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <h3>House Building Permit</h3>
+      <p>Approval for new constructions and renovations within panchayat</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌾</span>
+      <h3>Agriculture Support</h3>
+      <p>Krishi Bhavan services, farmer registration, and subsidy schemes</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💰</span>
+      <h3>Welfare Pensions</h3>
+      <p>Old age, widow, disability and agricultural worker pensions</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚿</span>
+      <h3>Water Connection</h3>
+      <p>Kerala Water Authority new connection and complaint redressal</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛣️</span>
+      <h3>Road & Infrastructure</h3>
+      <p>MGNREGS roads, street lights, drains and public works</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🗳️</span>
+      <h3>Ration Card</h3>
+      <p>New ration card, corrections, and name inclusion applications</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">👩‍💼</span>
+      <h3>Kudumbashree</h3>
+      <p>Women self-help group registration, loans, and livelihood support</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌱</span>
+      <h3>MGNREGS</h3>
+      <p>Job card issuance, work application and wage disbursement</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏗️</span>
+      <h3>Housing Scheme</h3>
+      <p>LIFE mission, EWS housing and tribal housing applications</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📄</span>
+      <h3>Income Certificate</h3>
+      <p>Caste, income, residency and nativity certificate issuance</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">♻️</span>
+      <h3>Waste Management</h3>
+      <p>Haritha Keralam mission, composting and collection services</p>
+    </div>
+  </div>
+</section>
+
+<!-- WARDS -->
+<section id="wards">
+  <div class="section-header fade-in">
+    <div class="section-tag">Governance</div>
+    <h2>Ward Information</h2>
+    <p>Muliyar Grama Panchayat is divided into 13 wards, each represented by an elected Ward Member.</p>
+  </div>
+  <div class="wards-layout fade-in">
+    <div class="ward-list" id="wardList">
+      <!-- Generated by JS -->
+    </div>
+    <div class="ward-map-visual">
+      <div class="map-placeholder">
+        <span class="icon">🗺️</span>
+        <h3 id="wardTitle">Select a Ward</h3>
+        <p id="wardDesc">Click on any ward from the list to view details about that ward including its representative, key facilities, and development projects.</p>
+        <div class="ward-detail" id="wardDetail" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICIALS -->
+<section id="officials">
+  <div class="section-header fade-in">
+    <div class="section-tag">Leadership</div>
+    <h2>Elected Representatives & Officials</h2>
+    <p>Meet the elected leaders and administrative officials governing Muliyar Grama Panchayat.</p>
+  </div>
+  <div class="officials-grid fade-in">
+    <div class="official-card">
+      <div class="official-avatar">👩</div>
+      <h3>Panchayat President</h3>
+      <div class="role">Adhyaksha</div>
+      <div class="contact">📞 Contact Office: 04935-XXXXXX</div>
+    </div>
+    <div class="official-card">
+      <div class="official-avatar">👨</div>
+      <h3>Vice President</h3>
+      <div class="role">Upadhyaksha</div>
+      <div class="contact">📞 Contact Office</div>
+    </div>
+    <div class="official-card">
+      <div class="official-avatar">👨‍💼</div>
+      <h3>Panchayat Secretary</h3>
+      <div class="role">Administrative Head</div>
+      <div class="contact">📞 Office: 04935-XXXXXX</div>
+    </div>
+    <div class="official-card">
+      <div class="official-avatar">👩‍⚕️</div>
+      <h3>Medical Officer</h3>
+      <div class="role">PHC Muliyar</div>
+      <div class="contact">📞 PHC: 04935-XXXXXX</div>
+    </div>
+    <div class="official-card">
+      <div class="official-avatar">👨‍🌾</div>
+      <h3>Agriculture Officer</h3>
+      <div class="role">Krishi Bhavan</div>
+      <div class="contact">📞 Krishi Bhavan</div>
+    </div>
+    <div class="official-card">
+      <div class="official-avatar">👩‍🏫</div>
+      <h3>Anganwadi Supervisor</h3>
+      <div class="role">ICDS – Muliyar</div>
+      <div class="contact">📞 CDPO Office</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header fade-in">
+    <div class="section-tag">Get In Touch</div>
+    <h2>Contact the Panchayat</h2>
+    <p>Reach out to us for any queries, grievances, or service requests. We are here to help you.</p>
+  </div>
+  <div class="contact-layout fade-in">
+    <div>
+      <div class="contact-info-item">
+        <div class="ci-icon">📍</div>
+        <div>
+          <h4>Office Address</h4>
+          <p>Muliyar Grama Panchayat Office<br/>Muliyar, Mananthavady Taluk<br/>Wayanad District, Kerala – 670 731</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon">📞</div>
+        <div>
+          <h4>Phone & Fax</h4>
+          <p>Office: 04935 – XXXXXX<br/>Fax: 04935 – XXXXXX<br/>PHC: 04935 – XXXXXX</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon">⏰</div>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday – Saturday<br/>10:00 AM – 5:00 PM<br/>(Closed on Government Holidays)</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon">🌐</div>
+        <div>
+          <h4>Online Portal</h4>
+          <p>Kerala Panchayat Portal:<br/>www.lsgkerala.gov.in<br/>e-District: edistrict.kerala.gov.in</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name" id="fName"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX" id="fPhone"/>
+      </div>
+      <div class="form-group">
+        <label>Ward Number</label>
+        <select id="fWard">
+          <option value="">Select your ward</option>
+          <option>Ward 1</option><option>Ward 2</option><option>Ward 3</option>
+          <option>Ward 4</option><option>Ward 5</option><option>Ward 6</option>
+          <option>Ward 7</option><option>Ward 8</option><option>Ward 9</option>
+          <option>Ward 10</option><option>Ward 11</option><option>Ward 12</option>
+          <option>Ward 13</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select id="fSubject">
+          <option value="">Select subject</option>
+          <option>Certificate Request</option>
+          <option>Pension Enquiry</option>
+          <option>MGNREGS / Job Card</option>
+          <option>Health Complaint</option>
+          <option>Road / Infrastructure</option>
+          <option>Water Supply Issue</option>
+          <option>Kudumbashree</option>
+          <option>General Enquiry</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Describe your query or grievance..." id="fMsg"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Send Message ➜</button>
+      <div class="form-success" id="formSuccess">✅ Your message has been submitted. We will respond within 2–3 working days.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="fn">🌿 Muliyar Grama Panchayat</div>
+      <p>Serving the communities of Muliyar with transparent governance and dedicated public service. Wayanad, Kerala.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <a href="#about">About Panchayat</a>
+      <a href="#facilities">Health Centres</a>
+      <a href="#education">Schools</a>
+      <a href="#services">Services</a>
+      <a href="#wards">Ward Info</a>
+    </div>
+    <div class="footer-links">
+      <h5>Government Portals</h5>
+      <a href="https://lsgkerala.gov.in" target="_blank">LSG Kerala</a>
+      <a href="https://edistrict.kerala.gov.in" target="_blank">e-District Kerala</a>
+      <a href="https://sanketham.kerala.gov.in" target="_blank">Sanketham</a>
+      <a href="https://cmdkerala.net" target="_blank">CMD Kerala</a>
+    </div>
+    <div class="footer-links">
+      <h5>Emergency</h5>
+      <a href="#">Police: 100</a>
+      <a href="#">Ambulance: 108</a>
+      <a href="#">DISHA: 1056</a>
+      <a href="#">Fire: 101</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Muliyar Grama Panchayat, Wayanad, Kerala. All rights reserved. | Developed for public information.
+  </div>
+</footer>
+
+<a class="scroll-top" href="#home" id="scrollTop">↑</a>
+
+<script>
+  // ── NAV MOBILE TOGGLE
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  // close on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  // ── SCROLL TOP
+  window.addEventListener('scroll', () => {
+    const st = document.getElementById('scrollTop');
+    st.classList.toggle('show', window.scrollY > 400);
+  });
+
+  // ── FADE IN OBSERVER
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── WARD DATA
+  const wards = [
+    { num: 1, name: "Muliyar North", rep: "Ward Member – Seat A", desc: "Includes the northern residential areas, 2 anganwadis, and the main market area.", projects: "Street lighting, drain renovation" },
+    { num: 2, name: "Muliyar South", rep: "Ward Member – Seat B", desc: "Southern ward with agricultural lands, one sub-centre and Kudumbashree units.", projects: "MGNREGS road works, composting units" },
+    { num: 3, name: "Panamaram East", rep: "Ward Member – Seat C", desc: "Eastern ward near Panamaram road with primary school and health sub-centre.", projects: "Anganwadi building renovation" },
+    { num: 4, name: "Tribal Colony", rep: "Ward Member – Seat D", desc: "Predominantly tribal population. Residential school, special sub-centre, ITDP schemes.", projects: "Tribal housing, road improvement" },
+    { num: 5, name: "Karinthalam", rep: "Ward Member – Seat E", desc: "Agricultural ward with spice cultivation. Krishi Bhavan service point.", projects: "Irrigation canal maintenance" },
+    { num: 6, name: "Nellikattu", rep: "Ward Member – Seat F", desc: "Mixed residential ward. GLPS Nellikattu, anganwadi, and welfare centre.", projects: "Water supply pipeline extension" },
+    { num: 7, name: "Peechi", rep: "Ward Member – Seat G", desc: "Ward near forest boundary. Eco-tourism potential, biodiversity rich zone.", projects: "Eco-development, bio-fencing" },
+    { num: 8, name: "Mulloor", rep: "Ward Member – Seat H", desc: "Mulloor ward with upper primary school, paddy fields and community hall.", projects: "Community hall renovation" },
+    { num: 9, name: "Kottathara", rep: "Ward Member – Seat I", desc: "Kottathara ward serving farming community and daily wage labourers.", projects: "MGNREGS wage employment" },
+    { num: 10, name: "Paruthy Mala", rep: "Ward Member – Seat J", desc: "Hilly terrain ward. Tribal families, forest produce collection centres.", projects: "Tribal road connectivity" },
+    { num: 11, name: "Ambalavayal Road", rep: "Ward Member – Seat K", desc: "Ward along Ambalavayal road with commercial establishments and school.", projects: "Road widening, footpath" },
+    { num: 12, name: "Cheeniyamala", rep: "Ward Member – Seat L", desc: "Tea estate workers' colony. Plantation labour welfare, MGNREGS projects.", projects: "Labour welfare centre" },
+    { num: 13, name: "Ayyampuzha", rep: "Ward Member – Seat M", desc: "River-bank ward with paddy cultivation. Flood-prone area with bund maintenance needs.", projects: "Flood bund repair, drainage" },
+  ];
+
+  const wardList = document.getElementById('wardList');
+  wards.forEach(w => {
+    const div = document.createElement('div');
+    div.className = 'ward-item';
+    div.innerHTML = `<div class="ward-num">${w.num}</div><div><div class="ward-name">${w.name}</div><div class="ward-rep">${w.rep}</div></div>`;
+    div.addEventListener('click', () => {
+      document.querySelectorAll('.ward-item').forEach(i => i.classList.remove('active'));
+      div.classList.add('active');
+      document.getElementById('wardTitle').textContent = `Ward ${w.num}: ${w.name}`;
+      document.getElementById('wardDesc').textContent = w.desc;
+      const det = document.getElementById('wardDetail');
+      det.style.display = 'block';
+      det.innerHTML = `<h4>🏗️ Active Projects</h4><p>${w.projects}</p>`;
+    });
+    wardList.appendChild(div);
+  });
+
+  // ── CONTACT FORM
+  function submitForm() {
+    const name = document.getElementById('fName').value.trim();
+    const phone = document.getElementById('fPhone').value.trim();
+    const msg = document.getElementById('fMsg').value.trim();
+    if (!name || !phone || !msg) {
+      alert('Please fill in Name, Phone, and Message before submitting.');
+      return;
+    }
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('fName').value = '';
+    document.getElementById('fPhone').value = '';
+    document.getElementById('fMsg').value = '';
+    document.getElementById('fSubject').value = '';
+    document.getElementById('fWard').value = '';
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
+  }
+</script>
+</body>
+</html>
